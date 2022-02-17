@@ -1,0 +1,84 @@
+CMD e PowerShell fazem as mesmas coisas, porém o PowerShell é mais completo.
+
+Ao abrir o prompt, o caminho padrão é o C (HD principal da máquina e onde o windows está instalado), e Users, a pasta de usuários.
+
+É possível abrir o PowerShell em um caminho específico, basta usar shift + botão direito em uma pasta e selecionar a opção PowerShell. O terminal irá mostrar o caminho selecionado.
+
+-------------------------------- COMANDOS -------------------------------------
+dir -> mostra as pastas(diretórios) e arquivos contidos na pasta apontada pelo terminal
+
+cd(change directory) + "nome da pasta" -> serve como um duplo clique do mouse, avançando para dentro de uma pasta que deve estar contida dentro da pasta atual  
+help -> mostra os comandos disponíveis no terminal 
+
+cd + .. -> retrocede uma pasta 
+
+cd + / -> retrocede até a primeira pasta
+
+cls -> limpa tudo que foi digitado
+
+mkdir(make directory) + nome da pasta -> cria uma pasta no endereço atual 
+
+del + nome da pasta -> apaga o conteúdo dentro da pasta
+
+rmdir(remove directory) + "nome da pasta" + /S + /Q -> apaga a pasta com tudo que está dentro dela
+
+echo + "string" -> escreve no terminal o que foi passado após o echo
+
+echo + "string" + > + "nomeArquivo.txt" -> cria um arquivo e escreve a mensagem dentro dele 
+
+-------------GIT BASH
+ls -> lista o conteúdo da pasta
+ls + -a -> lista os arquivos ocultos 
+
+primeira vez usando o git é necessário definir um user
+       git config --global user.email "email.com" (email desejado)
+       git config --global user.name "name" (nome desejado)
+
+git init (cria o repositório em uma pasta, armazenando-o no working directory e tirando-os da area de untracked file)
+
+git status (revela se há arquivos no working directory esperando para serem adicionados)
+
+git add * (envia os arquivos para a staging area, onde vão "se preparar para entrar em ação")
+
+git commit -m "descrição do commit" (envia os arquivos para o local repository, onde podem ser movidos para os repositórios remotos)
+
+mv + "nomeArquivo" + ./"nomeDaNovaPasta"/ -> move um arquivo para outra pasta 
+
+git config --list -> mostra as credenciais cadastradas (para sair disso basta digitar "q"
+
+git config --global --unset user.email (retira o cadastro de email)
+git config --global --unset user.name (retira o cadastro de nome)
+
+ESSES DOIS DADOS DEVEM SER OS MESMOS UTILIZADOS NO GITHUB
+
+GRAVANDO ELES NOVAMENTE APÓS APAGAR:
+git config --global user.email "email desejado, igual do github"
+git config --global user.name "nome desejado, igual do github"
+
+git remote add origin "urlDoRepositorioRemoto" -> serve para cadastrar um repositorio remoto no repositorio local
+
+git push origin master -> envia os arquivos já adicionados para o repositorio remoto 
+
+git pull origin master -> atualiza seu repositorio local com as mudanças feitas no remoto  
+
+git clone + "urlDoRepositorioRemoto" -> clona para o repositorio local um repositorio remoto
+
+-------------------------------- ATALHOS -------------------------------------
+TAB -> auto-completa palavras, como nome de arquivos e pastas
+
+SETA PARA CIMA -> retorna os comandos anteriormente digitados
+
+CRTL + L -> limpa a tela (git bash)
+
+-------------------------------- TEORIA -------------------------------------
+SHA1 serve para encriptação de um arquivo, gerando uma chave de 40 caracteres
+
+BLOB armazena o SHA1 do arquivo
+TREE aponta para o BLOB ou outras TREES, possui um proprio SHA1 e armazena o nome do arquivo 
+COMMIT aponta para uma arvore, para o ultimo COMMIT feito (parente), para o autor, para uma mensagem explicando a alteração e o timestamp (data da mudança)
+
+realizar uma mudança no SHA1 de um arquivo em uma BLOB altera toda a estrutura
+------------------------------
+arquivos "markdown" se aproveitam do recurso de estilização do HTML
+a extensão deles é o .md
+ 
