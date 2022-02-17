@@ -1,9 +1,3 @@
-CMD e PowerShell fazem as mesmas coisas, porém o PowerShell é mais completo.
-
-Ao abrir o prompt, o caminho padrão é o C (HD principal da máquina e onde o windows está instalado), e Users, a pasta de usuários.
-
-É possível abrir o PowerShell em um caminho específico, basta usar shift + botão direito em uma pasta e selecionar a opção PowerShell. O terminal irá mostrar o caminho selecionado.
-
 -------------------------------- COMANDOS -------------------------------------
 dir -> mostra as pastas(diretórios) e arquivos contidos na pasta apontada pelo terminal
 
